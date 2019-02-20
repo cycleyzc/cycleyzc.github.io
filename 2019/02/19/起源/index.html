@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Cycle">
 <meta property="og:description" content="前言旧的博客因为一些粗心大意的原因, 使之前的文章都丢失了, 所以做了这个 github 博客, 就算是重新出发, 拿最近喜欢的诗句作为开始吧 不正常人类症候群 我不预料未来 因为未来不可预料 也不怀念过去 因为过去未曾相识 我只迷恋现在 哪怕你我只是萍水相逢 就像黑夜里转瞬即逝的闪耀 也像寂静山谷中 耳边的鸟语虫鸣 我迷恋的现在 是你浅浅的微笑 是相遇的下一句 道别的上一秒 是世界熄灭前 你给我">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-19T07:30:25.896Z">
+<meta property="og:updated_time" content="2019-02-20T08:43:22.820Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="起">
 <meta name="twitter:description" content="前言旧的博客因为一些粗心大意的原因, 使之前的文章都丢失了, 所以做了这个 github 博客, 就算是重新出发, 拿最近喜欢的诗句作为开始吧 不正常人类症候群 我不预料未来 因为未来不可预料 也不怀念过去 因为过去未曾相识 我只迷恋现在 哪怕你我只是萍水相逢 就像黑夜里转瞬即逝的闪耀 也像寂静山谷中 耳边的鸟语虫鸣 我迷恋的现在 是你浅浅的微笑 是相遇的下一句 道别的上一秒 是世界熄灭前 你给我">
@@ -354,12 +354,24 @@
                 
               
 
-              <time title="创建时间：2019-02-19 14:53:05 / 修改时间：15:30:25" itemprop="dateCreated datePublished" datetime="2019-02-19T14:53:05+08:00">2019-02-19</time>
+              <time title="创建时间：2019-02-19 14:53:05" itemprop="dateCreated datePublished" datetime="2019-02-19T14:53:05+08:00">2019-02-19</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-02-20 16:43:22" itemprop="dateModified" datetime="2019-02-20T16:43:22+08:00">2019-02-20</time>
               
             
           </span>
@@ -376,7 +388,11 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/起/" itemprop="url" rel="index"><span itemprop="name">起</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                <a href="/categories/origin/" itemprop="url" rel="index">
+                <span itemprop="name">起</span>
+                </a>
+              </span>
 
                 
                 
@@ -386,6 +402,19 @@
 
           
             
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2019/02/19/起源/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2019/02/19/起源/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -500,6 +529,13 @@
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
 
   
 
@@ -799,6 +835,47 @@
 
   
 
+
+  
+    <!-- LOCAL: You can save these files to your site and update links -->
+
+  
+  <script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitmint.browser.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css">
+<!-- END LOCAL -->
+
+<style>
+#gitment-container a {
+  border-bottom: none;
+}
+
+</style>
+
+<script>
+  function renderGitment() {
+    var gitment = new Gitmint({
+      id: window.location.pathname,
+      owner: 'cycleyzc',
+      repo: 'https://github.com/cycleyzc/cycleyzc.github.io.git',
+      
+        lang: '' || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+      
+      oauth: {
+      
+      
+        client_secret: '79cce7795a571d5f640e2de2b8a8079b9de84f41',
+      
+        client_id: '17e1169a309166e805a5'
+      }
+    });
+    gitment.render('gitment-container');
+  }
+
+  
+    renderGitment();
+  
+</script>
 
   
 

@@ -14,7 +14,7 @@
   
 
 
-<html class="theme-next mist use-motion" lang="zh-CN">
+<html class="theme-next gemini use-motion" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -48,7 +48,7 @@
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
 
-<link rel="stylesheet" href="/css/main.css?v=0.320636828316063">
+<link rel="stylesheet" href="/css/main.css?v=0.8244241008750897">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="http://source.cycleyzc.site/images/cycle_icon.png?v=7.0.0">
@@ -72,7 +72,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Mist',
+    scheme: 'Gemini',
     version: '7.0.0',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: false,
@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Cycle">
 <meta property="og:description" content="原文链接: 一道常被人轻视的前端 JS 面试题 前端程序员经常忽视的一个 JavaScript 面试题 问题1234567891011121314151617function Foo()&amp;#123;     getName() &amp;#123; alert(1); &amp;#125;;     return this;&amp;#125;;Foo.getName = function() &amp;#123;     al">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-21T09:03:26.522Z">
+<meta property="og:updated_time" content="2019-02-25T02:55:38.671Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="对象读取、变量提升与函数提升、全局变量、运算符优先级、原型">
 <meta name="twitter:description" content="原文链接: 一道常被人轻视的前端 JS 面试题 前端程序员经常忽视的一个 JavaScript 面试题 问题1234567891011121314151617function Foo()&amp;#123;     getName() &amp;#123; alert(1); &amp;#125;;     return this;&amp;#125;;Foo.getName = function() &amp;#123;     al">
@@ -227,6 +227,23 @@
     <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
 
   </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tech">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/tech" rel="section"><i class="menu-item-icon fa fa-fw fa-bug"></i> <br>技术</a>
+
+  </li>
 
       
       
@@ -240,9 +257,6 @@
       
     </ul>
   
-
-  
-    
 
   
 
@@ -292,6 +306,9 @@
       <div class="main-inner">
         <div class="content-wrap">
           
+            
+
+          
           <div id="content" class="content">
             
 
@@ -306,11 +323,16 @@
 
   
 
+  
+    
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
-  <div class="post-block">
+
+  <div class="post-block ">
     <link itemprop="mainEntityOfPage" href="https://cycleyzc.github.io/2019/02/21/对象读取、变量提升与函数提升、全局变量、运算符优先级、原型/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -354,12 +376,24 @@
                 
               
 
-              <time title="创建时间：2019-02-21 15:08:57 / 修改时间：17:03:26" itemprop="dateCreated datePublished" datetime="2019-02-21T15:08:57+08:00">2019-02-21</time>
+              <time title="创建时间：2019-02-21 15:08:57" itemprop="dateCreated datePublished" datetime="2019-02-21T15:08:57+08:00">2019-02-21</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-02-25 10:55:38" itemprop="dateModified" datetime="2019-02-25T10:55:38+08:00">2019-02-25</time>
               
             
           </span>
@@ -377,7 +411,18 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                <a href="/categories/front-end/" itemprop="url" rel="index">
+                <a href="/categories/tech/" itemprop="url" rel="index">
+                <span itemprop="name">技术</span>
+                </a>
+              </span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                <a href="/categories/tech/front-end/" itemprop="url" rel="index">
                 <span itemprop="name">前端</span>
                 </a>
               </span>
@@ -388,7 +433,7 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                <a href="/categories/basic-knowledge/" itemprop="url" rel="index">
+                <a href="/categories/tech/basic-knowledge/" itemprop="url" rel="index">
                 <span itemprop="name">基础知识点</span>
                 </a>
               </span>
@@ -499,20 +544,6 @@
     <div>    
  
  
-    <div class="post-copyright">
-      <p class="post-copyright-author">
-          <strong>本文作者：</strong>Cycle
-      </p>
-      <p class="post-copyright-link">
-        <strong>本文链接：</strong>
-        <a href="/2019/02/21/对象读取、变量提升与函数提升、全局变量、运算符优先级、原型/" title="对象读取、变量提升与函数提升、全局变量、运算符优先级、原型" target="_blank">对象读取、变量提升与函数提升、全局变量、运算符优先级、原型</a>
-      </p>
-      <p class="post-copyright-license">
-        <strong>版权声明： </strong>
-        本博客的所有文章, 除了个别文章有特别声明外，均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议。转载请注明出处！
-      </p>
-    </div>
-  
 </div>
 
     
@@ -523,10 +554,35 @@
     
 
     
+      <div>
+        
+
+
+
+  
+
+
+
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Cycle</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    
+    <a href="https://cycleyzc.github.io/2019/02/21/对象读取、变量提升与函数提升、全局变量、运算符优先级、原型/" title="对象读取、变量提升与函数提升、全局变量、运算符优先级、原型">https://cycleyzc.github.io/2019/02/21/对象读取、变量提升与函数提升、全局变量、运算符优先级、原型/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
 
     <footer class="post-footer">
       
         <div class="post-tags">
+          
+            <a href="/tags/2019/" rel="tag"># 2019</a>
           
             <a href="/tags/javascript/" rel="tag"># javascript</a>
           
@@ -629,7 +685,7 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -650,7 +706,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   
                 </div>
@@ -716,8 +774,37 @@
           
 
           
+             <div class="cc-license motion-element" itemprop="license">
+              
+                
+              
+              
+              
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+             </div>
+          
 
           
+          
+
+          
+          <ul class="fav-lyrics">
+            <li>我不预料未来</li>
+            <li>因为未来不可预料</li>
+            <li>也不怀念过去</li>
+            <li>因为过去未曾相识</li>
+            <li>我只迷恋现在</li>
+            <li>哪怕你我只是萍水相逢</li>
+            <li>就像黑夜里转瞬即逝的闪耀</li>
+            <li>也像寂静山谷中</li>
+            <li>耳边的鸟语虫鸣</li>
+            <li>我迷恋的现在</li>
+            <li>是你浅浅的微笑</li>
+            <li>是相遇的下一句</li>
+            <li>道别的上一秒</li>
+            <li>是世界熄灭前</li>
+            <li>你给我的 最后一次心跳</li>
+          </ul>
           
 
           
@@ -775,7 +862,7 @@
 
 
 
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.0.0</div>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.0.0</div>
 
 
 
@@ -863,7 +950,9 @@
   
 
 
-  <script src="/js/src/schemes/muse.js?v=7.0.0"></script>
+  <script src="/js/src/affix.js?v=7.0.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=7.0.0"></script>
 
 
 

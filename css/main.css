@@ -1902,7 +1902,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff9c16;
+  background: #bd05ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3392,8 +3392,7 @@ ul.breadcrumb li+li:last-child {
   height: 100%;
 }
 .animation-border-around:hover::after {
-  background-color: #333;
-  animation: border-around-reverse 1s forwards ease-in-out reverse;
+  animation: border-around-reverse 0.6s 0.2s forwards ease-in-out reverse;
 }
 my-mark {
   background-color: #fcd309;
@@ -3434,110 +3433,118 @@ border-around:hover::after {
 }
 @-moz-keyframes border-around-reverse {
   0% {
-    -webkit-clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) calc(100% - 4px), 4px calc(100% - 4px), 4px 4px, 0 4px, 0 100%, 100% 100%, 100% 0);
-    -moz-clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) calc(100% - 4px), 4px calc(100% - 4px), 4px 4px, 0 4px, 0 100%, 100% 100%, 100% 0);
-    clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) calc(100% - 4px), 4px calc(100% - 4px), 4px 4px, 0 4px, 0 100%, 100% 100%, 100% 0);
+    background-color: #ddd;
+    -webkit-clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 2px), 2px calc(100% - 2px), 2px 2px, 0 2px, 0 100%, 100% 100%, 100% 0);
+    -moz-clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 2px), 2px calc(100% - 2px), 2px 2px, 0 2px, 0 100%, 100% 100%, 100% 0);
+    clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 2px), 2px calc(100% - 2px), 2px 2px, 0 2px, 0 100%, 100% 100%, 100% 0);
   }
   25% {
-    -webkit-clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) calc(100% - 4px), 4px calc(100% - 4px), 4px calc(100% - 4px), 0 calc(100% - 4px), 0 100%, 100% 100%, 100% 0);
-    -moz-clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) calc(100% - 4px), 4px calc(100% - 4px), 4px calc(100% - 4px), 0 calc(100% - 4px), 0 100%, 100% 100%, 100% 0);
-    clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) calc(100% - 4px), 4px calc(100% - 4px), 4px calc(100% - 4px), 0 calc(100% - 4px), 0 100%, 100% 100%, 100% 0);
+    -webkit-clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 2px), 2px calc(100% - 2px), 2px calc(100% - 2px), 0 calc(100% - 2px), 0 100%, 100% 100%, 100% 0);
+    -moz-clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 2px), 2px calc(100% - 2px), 2px calc(100% - 2px), 0 calc(100% - 2px), 0 100%, 100% 100%, 100% 0);
+    clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 2px), 2px calc(100% - 2px), 2px calc(100% - 2px), 0 calc(100% - 2px), 0 100%, 100% 100%, 100% 0);
   }
   50% {
-    -webkit-clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) 100%, 100% 100%, 100% 0);
-    -moz-clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) 100%, 100% 100%, 100% 0);
-    clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) 100%, 100% 100%, 100% 0);
+    -webkit-clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) 100%, 100% 100%, 100% 0);
+    -moz-clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) 100%, 100% 100%, 100% 0);
+    clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) 100%, 100% 100%, 100% 0);
   }
   75% {
-    -webkit-clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, 100% 4px, 100% 0);
-    -moz-clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, 100% 4px, 100% 0);
-    clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, 100% 4px, 100% 0);
+    -webkit-clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, 100% 2px, 100% 0);
+    -moz-clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, 100% 2px, 100% 0);
+    clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, 100% 2px, 100% 0);
   }
   100% {
-    -webkit-clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, 0 4px, 0 0);
-    -moz-clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, 0 4px, 0 0);
-    clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, 0 4px, 0 0);
+    background-color: #ddd;
+    -webkit-clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, 0 2px, 0 0);
+    -moz-clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, 0 2px, 0 0);
+    clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, 0 2px, 0 0);
   }
 }
 @-webkit-keyframes border-around-reverse {
   0% {
-    -webkit-clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) calc(100% - 4px), 4px calc(100% - 4px), 4px 4px, 0 4px, 0 100%, 100% 100%, 100% 0);
-    -moz-clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) calc(100% - 4px), 4px calc(100% - 4px), 4px 4px, 0 4px, 0 100%, 100% 100%, 100% 0);
-    clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) calc(100% - 4px), 4px calc(100% - 4px), 4px 4px, 0 4px, 0 100%, 100% 100%, 100% 0);
+    background-color: #ddd;
+    -webkit-clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 2px), 2px calc(100% - 2px), 2px 2px, 0 2px, 0 100%, 100% 100%, 100% 0);
+    -moz-clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 2px), 2px calc(100% - 2px), 2px 2px, 0 2px, 0 100%, 100% 100%, 100% 0);
+    clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 2px), 2px calc(100% - 2px), 2px 2px, 0 2px, 0 100%, 100% 100%, 100% 0);
   }
   25% {
-    -webkit-clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) calc(100% - 4px), 4px calc(100% - 4px), 4px calc(100% - 4px), 0 calc(100% - 4px), 0 100%, 100% 100%, 100% 0);
-    -moz-clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) calc(100% - 4px), 4px calc(100% - 4px), 4px calc(100% - 4px), 0 calc(100% - 4px), 0 100%, 100% 100%, 100% 0);
-    clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) calc(100% - 4px), 4px calc(100% - 4px), 4px calc(100% - 4px), 0 calc(100% - 4px), 0 100%, 100% 100%, 100% 0);
+    -webkit-clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 2px), 2px calc(100% - 2px), 2px calc(100% - 2px), 0 calc(100% - 2px), 0 100%, 100% 100%, 100% 0);
+    -moz-clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 2px), 2px calc(100% - 2px), 2px calc(100% - 2px), 0 calc(100% - 2px), 0 100%, 100% 100%, 100% 0);
+    clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 2px), 2px calc(100% - 2px), 2px calc(100% - 2px), 0 calc(100% - 2px), 0 100%, 100% 100%, 100% 0);
   }
   50% {
-    -webkit-clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) 100%, 100% 100%, 100% 0);
-    -moz-clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) 100%, 100% 100%, 100% 0);
-    clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) 100%, 100% 100%, 100% 0);
+    -webkit-clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) 100%, 100% 100%, 100% 0);
+    -moz-clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) 100%, 100% 100%, 100% 0);
+    clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) 100%, 100% 100%, 100% 0);
   }
   75% {
-    -webkit-clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, 100% 4px, 100% 0);
-    -moz-clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, 100% 4px, 100% 0);
-    clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, 100% 4px, 100% 0);
+    -webkit-clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, 100% 2px, 100% 0);
+    -moz-clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, 100% 2px, 100% 0);
+    clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, 100% 2px, 100% 0);
   }
   100% {
-    -webkit-clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, 0 4px, 0 0);
-    -moz-clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, 0 4px, 0 0);
-    clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, 0 4px, 0 0);
+    background-color: #ddd;
+    -webkit-clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, 0 2px, 0 0);
+    -moz-clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, 0 2px, 0 0);
+    clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, 0 2px, 0 0);
   }
 }
 @-o-keyframes border-around-reverse {
   0% {
-    -webkit-clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) calc(100% - 4px), 4px calc(100% - 4px), 4px 4px, 0 4px, 0 100%, 100% 100%, 100% 0);
-    -moz-clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) calc(100% - 4px), 4px calc(100% - 4px), 4px 4px, 0 4px, 0 100%, 100% 100%, 100% 0);
-    clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) calc(100% - 4px), 4px calc(100% - 4px), 4px 4px, 0 4px, 0 100%, 100% 100%, 100% 0);
+    background-color: #ddd;
+    -webkit-clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 2px), 2px calc(100% - 2px), 2px 2px, 0 2px, 0 100%, 100% 100%, 100% 0);
+    -moz-clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 2px), 2px calc(100% - 2px), 2px 2px, 0 2px, 0 100%, 100% 100%, 100% 0);
+    clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 2px), 2px calc(100% - 2px), 2px 2px, 0 2px, 0 100%, 100% 100%, 100% 0);
   }
   25% {
-    -webkit-clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) calc(100% - 4px), 4px calc(100% - 4px), 4px calc(100% - 4px), 0 calc(100% - 4px), 0 100%, 100% 100%, 100% 0);
-    -moz-clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) calc(100% - 4px), 4px calc(100% - 4px), 4px calc(100% - 4px), 0 calc(100% - 4px), 0 100%, 100% 100%, 100% 0);
-    clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) calc(100% - 4px), 4px calc(100% - 4px), 4px calc(100% - 4px), 0 calc(100% - 4px), 0 100%, 100% 100%, 100% 0);
+    -webkit-clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 2px), 2px calc(100% - 2px), 2px calc(100% - 2px), 0 calc(100% - 2px), 0 100%, 100% 100%, 100% 0);
+    -moz-clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 2px), 2px calc(100% - 2px), 2px calc(100% - 2px), 0 calc(100% - 2px), 0 100%, 100% 100%, 100% 0);
+    clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 2px), 2px calc(100% - 2px), 2px calc(100% - 2px), 0 calc(100% - 2px), 0 100%, 100% 100%, 100% 0);
   }
   50% {
-    -webkit-clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) 100%, 100% 100%, 100% 0);
-    -moz-clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) 100%, 100% 100%, 100% 0);
-    clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) 100%, 100% 100%, 100% 0);
+    -webkit-clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) 100%, 100% 100%, 100% 0);
+    -moz-clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) 100%, 100% 100%, 100% 0);
+    clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) 100%, 100% 100%, 100% 0);
   }
   75% {
-    -webkit-clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, 100% 4px, 100% 0);
-    -moz-clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, 100% 4px, 100% 0);
-    clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, 100% 4px, 100% 0);
+    -webkit-clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, 100% 2px, 100% 0);
+    -moz-clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, 100% 2px, 100% 0);
+    clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, 100% 2px, 100% 0);
   }
   100% {
-    -webkit-clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, 0 4px, 0 0);
-    -moz-clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, 0 4px, 0 0);
-    clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, 0 4px, 0 0);
+    background-color: #ddd;
+    -webkit-clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, 0 2px, 0 0);
+    -moz-clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, 0 2px, 0 0);
+    clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, 0 2px, 0 0);
   }
 }
 @keyframes border-around-reverse {
   0% {
-    -webkit-clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) calc(100% - 4px), 4px calc(100% - 4px), 4px 4px, 0 4px, 0 100%, 100% 100%, 100% 0);
-    -moz-clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) calc(100% - 4px), 4px calc(100% - 4px), 4px 4px, 0 4px, 0 100%, 100% 100%, 100% 0);
-    clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) calc(100% - 4px), 4px calc(100% - 4px), 4px 4px, 0 4px, 0 100%, 100% 100%, 100% 0);
+    background-color: #ddd;
+    -webkit-clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 2px), 2px calc(100% - 2px), 2px 2px, 0 2px, 0 100%, 100% 100%, 100% 0);
+    -moz-clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 2px), 2px calc(100% - 2px), 2px 2px, 0 2px, 0 100%, 100% 100%, 100% 0);
+    clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 2px), 2px calc(100% - 2px), 2px 2px, 0 2px, 0 100%, 100% 100%, 100% 0);
   }
   25% {
-    -webkit-clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) calc(100% - 4px), 4px calc(100% - 4px), 4px calc(100% - 4px), 0 calc(100% - 4px), 0 100%, 100% 100%, 100% 0);
-    -moz-clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) calc(100% - 4px), 4px calc(100% - 4px), 4px calc(100% - 4px), 0 calc(100% - 4px), 0 100%, 100% 100%, 100% 0);
-    clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) calc(100% - 4px), 4px calc(100% - 4px), 4px calc(100% - 4px), 0 calc(100% - 4px), 0 100%, 100% 100%, 100% 0);
+    -webkit-clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 2px), 2px calc(100% - 2px), 2px calc(100% - 2px), 0 calc(100% - 2px), 0 100%, 100% 100%, 100% 0);
+    -moz-clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 2px), 2px calc(100% - 2px), 2px calc(100% - 2px), 0 calc(100% - 2px), 0 100%, 100% 100%, 100% 0);
+    clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 2px), 2px calc(100% - 2px), 2px calc(100% - 2px), 0 calc(100% - 2px), 0 100%, 100% 100%, 100% 0);
   }
   50% {
-    -webkit-clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) 100%, 100% 100%, 100% 0);
-    -moz-clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) 100%, 100% 100%, 100% 0);
-    clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) 100%, 100% 100%, 100% 0);
+    -webkit-clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) 100%, 100% 100%, 100% 0);
+    -moz-clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) 100%, 100% 100%, 100% 0);
+    clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) 100%, 100% 100%, 100% 0);
   }
   75% {
-    -webkit-clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, 100% 4px, 100% 0);
-    -moz-clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, 100% 4px, 100% 0);
-    clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, 100% 4px, 100% 0);
+    -webkit-clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, 100% 2px, 100% 0);
+    -moz-clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, 100% 2px, 100% 0);
+    clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, 100% 2px, 100% 0);
   }
   100% {
-    -webkit-clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, 0 4px, 0 0);
-    -moz-clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, 0 4px, 0 0);
-    clip-path: polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, calc(100% - 4px) 4px, 0 4px, 0 0);
+    background-color: #ddd;
+    -webkit-clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, 0 2px, 0 0);
+    -moz-clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, 0 2px, 0 0);
+    clip-path: polygon(0 0, 0 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, calc(100% - 2px) 2px, 0 2px, 0 0);
   }
 }
 @-moz-keyframes border-around-flow {

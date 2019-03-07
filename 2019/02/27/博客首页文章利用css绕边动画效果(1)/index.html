@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=0.20001086140078606">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="http://source.cycleyzc.site/images/cycle_icon.png?v=7.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="http://source.cycleyzc.site/images/cycle_icon.png?v=7.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="http://source.cycleyzc.site/images/cycle_icon.png?v=7.0.0">
+
+
+  <link rel="mask-icon" href="http://source.cycleyzc.site/images/cycle_icon.png?v=7.0.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.0.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: 'W5GCGSNJNW',
+      apiKey: '5e52cb9a12ee5054973fb28a3c344a04',
+      indexName: 'cycleyzc.github.io',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"搜索","hits_empty":"找不到与${query}相关的文章, 🤔🤔🤔","hits_stats":"找到${hits}个结果, 😎😎😎"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="该动画效果对 IE 不兼容!且在 PC 上才能看到效果 效果鼠标放在此方块上看效果 源码效果   See the Pen   GeJREg by cycleyzc (@cycleyzc)  on CodePen.   🌕🌔🌓🌒🌑🌘🌗🌖🌕🌔🌓🌒🌑🌘🌗🌖🌕  实现前言基本是利用 css 的属性 animation 和 clip-path当然 clip-path 的兼容">
+<meta name="keywords" content="css,clip-path">
+<meta property="og:type" content="article">
+<meta property="og:title" content="博客首页文章利用css绕边动画效果(1)">
+<meta property="og:url" content="https://cycleyzc.github.io/2019/02/27/博客首页文章利用css绕边动画效果(1)/index.html">
+<meta property="og:site_name" content="Cycle">
+<meta property="og:description" content="该动画效果对 IE 不兼容!且在 PC 上才能看到效果 效果鼠标放在此方块上看效果 源码效果   See the Pen   GeJREg by cycleyzc (@cycleyzc)  on CodePen.   🌕🌔🌓🌒🌑🌘🌗🌖🌕🌔🌓🌒🌑🌘🌗🌖🌕  实现前言基本是利用 css 的属性 animation 和 clip-path当然 clip-path 的兼容">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://i.postimg.cc/tg8t78Wr/clip-path.png">
+<meta property="og:image" content="https://i.postimg.cc/yxLPPjkt/2019-02-27-12-06-05.png">
+<meta property="og:updated_time" content="2019-03-07T07:05:07.897Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="博客首页文章利用css绕边动画效果(1)">
+<meta name="twitter:description" content="该动画效果对 IE 不兼容!且在 PC 上才能看到效果 效果鼠标放在此方块上看效果 源码效果   See the Pen   GeJREg by cycleyzc (@cycleyzc)  on CodePen.   🌕🌔🌓🌒🌑🌘🌗🌖🌕🌔🌓🌒🌑🌘🌗🌖🌕  实现前言基本是利用 css 的属性 animation 和 clip-path当然 clip-path 的兼容">
+<meta name="twitter:image" content="https://i.postimg.cc/tg8t78Wr/clip-path.png">
+
+
+
+
+
+
+  <link rel="canonical" href="https://cycleyzc.github.io/2019/02/27/博客首页文章利用css绕边动画效果(1)/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>博客首页文章利用css绕边动画效果(1) | Cycle</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <!-- <span class="logo-line-before"><i></i></span> -->
+        <span class="site-title">Cycle</span>
+        <!-- <span class="logo-line-after"><i></i></span> -->
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">Cycle维持着烦恼</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tech">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/tech" rel="section"><i class="menu-item-icon fa fa-fw fa-bug"></i> <br>技术</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  
+    
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+
+  <div class="post-block ">
+    <link itemprop="mainEntityOfPage" href="https://cycleyzc.github.io/2019/02/27/博客首页文章利用css绕边动画效果(1)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Cycle">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="http://source.cycleyzc.site/images/determination.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Cycle">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">博客首页文章利用css绕边动画效果(1)
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-02-27 09:55:35" itemprop="dateCreated datePublished" datetime="2019-02-27T09:55:35+08:00">2019-02-27</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-03-07 15:05:07" itemprop="dateModified" datetime="2019-03-07T15:05:07+08:00">2019-03-07</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                <a href="/categories/tech/" itemprop="url" rel="index">
+                <span itemprop="name">技术</span>
+                </a>
+              </span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                <a href="/categories/tech/front-end/" itemprop="url" rel="index">
+                <span itemprop="name">前端</span>
+                </a>
+              </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2019/02/27/博客首页文章利用css绕边动画效果(1)/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/27/博客首页文章利用css绕边动画效果(1)/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><my-highlight>该动画效果对 IE 不兼容!且在 PC 上才能看到效果</my-highlight></p>
+<h1 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h1><p><border-around>鼠标放在此方块上看效果</border-around></p>
+<p><a href="https://codepen.io/cycleyzc/pen/GeJRmR" target="_blank" rel="noopener">源码效果</a></p>
+<p></p><p class="codepen" data-height="265" data-theme-id="0" data-default-tab="css,result" data-user="cycleyzc" data-slug-hash="GeJREg" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="GeJREg"><br>  <span>See the Pen <a href="https://codepen.io/cycleyzc/pen/GeJREg/" target="_blank" rel="noopener"><br>  GeJREg</a> by cycleyzc (<a href="https://codepen.io/cycleyzc" target="_blank" rel="noopener">@cycleyzc</a>)<br>  on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.</span><br></p><p></p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+<segment><br>🌕🌔🌓🌒🌑🌘🌗🌖🌕🌔🌓🌒🌑🌘🌗🌖🌕<br></segment>
+
+<h1 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>基本是利用 css 的属性 animation 和 clip-path<br>当然 clip-path 的兼容性确实堪忧, 如下图<br><a href="https://postimg.cc/4KbhSL8t" target="_blank" rel="noopener"><img src="https://i.postimg.cc/tg8t78Wr/clip-path.png" alt="clip-path.png"></a></p>
+<p>所以只能在博客里面使用来看看效果了</p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>根据 mdn 上对 clip-path 属性的定义</p>
+<blockquote>
+<p>clip-path 属性可以创建一个只有元素的部分区域可以显示的剪切区域</p>
+</blockquote>
+<p>方法说明:</p>
+<blockquote>
+<p>圆形 circle ( 半径 at 圆心坐标 )</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; clip-path:circle(50% at 50% 50%);</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p>椭圆形 ellipse ( 长短轴半径 at 圆心坐标 )</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; clip-path:ellipse(25% 50% at 50% 50%);</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p>矩形 inset ( 上右下左的边距 round 上右下左圆角 )</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; clip-path:inset(10px 20px 30px 10px round 20px 5px 50px 0);</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p>多边形(三角形/四边形/五边形等等) polygon( 连续的 xy 轴坐标点 )</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; clip-path polygon(0 0, 0 4px, calc(100% - 4px) 4px, calc(100% - 4px) calc(100% - 4px), 4px calc(100% - 4px), 4px 4px, 0 4px, 0 100%, 100% 100%, 100% 0);</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>那么要实现绕边的动画效果:</p>
+<ol>
+<li><p>表面上看只需要把中间区域给裁剪掉, 留下边框区域就行了</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">clip-path</span>: <span class="selector-tag">inset</span>(...);</span><br></pre></td></tr></table></figure>
+<p>然后发现虽然能剪出一个矩形, 却不能做反选的操作, 也就是留下的只能是选中的中间区域的矩形, 这就表示直接用 inset 方法是不行的了</p>
+</li>
+<li><p>沿着边框来裁剪<br>最终目的是把中间区域给裁剪掉, 留下边框区域, 这就意味着最后形成的区域肯定不是正矩形或正方形, 是个多边形, 所以要用到 polygon 方法</p>
+<p>首先不考虑其他条件的影响下, 基本的裁剪思路是这样的:</p>
+<p><a href="https://postimg.cc/D4bLfqQP" target="_blank" rel="noopener"><img src="https://i.postimg.cc/yxLPPjkt/2019-02-27-12-06-05.png" alt="2019-02-27-12-06-05.png"></a></p>
+</li>
+</ol>
+<div align="center"><img-note>初始裁剪路线图(小学生画风)</img-note></div>
+
+<p>但是, 我要做的是从上-&gt;右-&gt;下-&gt;左的绕边动画效果, 并不是静态的切边, 所以这里还要考虑在 css 使用 animation 属性时, 变换的情况与路线</p>
+<p>这里也有两个思路, 一是顺序的, 二是逆序的</p>
+<p>看下篇</p>
+
+      
+    </div>
+
+    
+
+    
+    <div class="post-end-container">
+      🔝🔝🔝🔝🔝🔝🔝🔝🔝🔝 <my-highlight>结束</my-highlight> 🔝🔝🔝🔝🔝🔝🔝🔝🔝🔝
+    </div>
+    
+
+    
+    
+    
+
+    <div>    
+ 
+ 
+</div>
+
+    
+
+    
+      
+    
+    
+
+    
+      <div>
+        
+
+
+
+  
+
+
+
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Cycle</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    
+    <a href="https://cycleyzc.github.io/2019/02/27/博客首页文章利用css绕边动画效果(1)/" title="博客首页文章利用css绕边动画效果(1)">https://cycleyzc.github.io/2019/02/27/博客首页文章利用css绕边动画效果(1)/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/承/" rel="tag"># 承</a>
+          
+            <a href="/tags/css/" rel="tag"># css</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/02/27/博客首页文章利用css绕边动画效果(2)/" rel="next" title="博客首页文章利用css绕边动画效果(2)">
+                <i class="fa fa-chevron-left"></i> 博客首页文章利用css绕边动画效果(2)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/06/搞点小东西/" rel="prev" title="搞点小东西">
+                搞点小东西 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="http://source.cycleyzc.site/images/determination.jpg" alt="Cycle">
+            
+              <p class="site-author-name" itemprop="name">Cycle</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives">
+                
+                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">分类</span>
+                  
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-name">标签</span>
+                  
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/cycleyzc" title="github &rarr; https://github.com/cycleyzc" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>github</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:cycle900802@gmail.com" title="email &rarr; mailto:cycle900802@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>email</a>
+                </span>
+              
+            </div>
+          
+
+          
+             <div class="cc-license motion-element" itemprop="license">
+              
+                
+              
+              
+              
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+             </div>
+          
+
+          
+          
+
+          
+          <ul class="fav-lyrics">
+            <li>我不预料未来</li>
+            <li>因为未来不可预料</li>
+            <li>也不怀念过去</li>
+            <li>因为过去未曾相识</li>
+            <li>我只迷恋现在</li>
+            <li>哪怕你我只是萍水相逢</li>
+            <li>就像黑夜里转瞬即逝的闪耀</li>
+            <li>也像寂静山谷中</li>
+            <li>耳边的鸟语虫鸣</li>
+            <li>我迷恋的现在</li>
+            <li>是你浅浅的微笑</li>
+            <li>是相遇的下一句</li>
+            <li>道别的上一秒</li>
+            <li>是世界熄灭前</li>
+            <li>你给我的 最后一次心跳</li>
+          </ul>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#效果"><span class="nav-number">1.</span> <span class="nav-text">效果</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#实现"><span class="nav-number">2.</span> <span class="nav-text">实现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">2.1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#思路"><span class="nav-number">2.2.</span> <span class="nav-text">思路</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Cycle</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.0.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.0"></script>
+
+  <script src="/js/src/motion.js?v=7.0.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=7.0.0"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=7.0.0"></script>
+
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.0"></script>
+<script src="/js/src/post-details.js?v=7.0.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=7.0.0"></script>
+
+
+
+  
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: true,
+    notify: false,
+    appId: 'PIdnU1YmQ3bjEkf93difofiq-gzGzoHsz',
+    appKey: 'cLcByYBjo2E2dlHApLA3X7L7',
+    placeholder: '留下你的神评论',
+    avatar: 'identicon',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+</script>
+
+
+
+
+  
+
+
+  
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=7.0.0"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <script src="/js/src/js.cookie.js?v=7.0.0"></script>
+  <script src="/js/src/scroll-cookie.js?v=7.0.0"></script>
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
